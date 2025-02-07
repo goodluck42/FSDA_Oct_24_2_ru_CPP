@@ -19,15 +19,15 @@ int main(int argc, char* argv[])
     //  * (x64) - 8bytes
     //
     // // allocate & delete
-    //  {
-    //      int* arr = new int[100];
+    // {
+    //     int* arr = new int[100];
     //
-    //      delete[] arr; // vector delete
+    //     delete[] arr; // vector delete
     //
-    //      int* value = new int;
+    //     int* value = new int;
     //
-    //      delete value; // scalar delete
-    //  }
+    //     delete value; // scalar delete
+    // }
     //
     // // dereference
     //  {
@@ -53,15 +53,18 @@ int main(int argc, char* argv[])
     // }
 
 
-    {
-        int size = 4;
-        int* arr = new int[size] {10, 20, 30, 40};
-        
-        std::cout << 1[arr] << '\n';
-        std::cout << *(1 + arr) << '\n';
-        
-        
-    }
+    // {
+    //     int size = 4;
+    //     int* arr = new int[size] {10, 20, 30, 40};
+    //     
+    //     std::cout << 1[arr] << '\n';
+    //     std::cout << *(1 + arr) << '\n';
+    //     
+    //     
+    // }
+
+    
+    
     
 
     // system("pause");
