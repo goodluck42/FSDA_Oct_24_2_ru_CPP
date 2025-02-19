@@ -63,11 +63,11 @@ void baz(int* ptr)
 
 int main(int argc, char* argv[])
 {
-    int* my_ptr = new int{7};
-
-    std::cout << &my_ptr << '\n';
-
-    baz(my_ptr);
+    // int* my_ptr = new int{7};
+    //
+    // std::cout << &my_ptr << '\n';
+    //
+    // baz(my_ptr);
 
     // std::cout << *my_ptr;
 
@@ -85,28 +85,58 @@ int main(int argc, char* argv[])
     //     std::cout << *ptr2 << '\n';
     //     
     // }
-    int length = 0;
-    int capacity = 5;
-    
-    int* arr = allocate(capacity);
+    // int length = 0;
+    // int capacity = 5;
+    //
+    // int* arr = allocate(capacity);
+    //
+    // for (int i = 0; i < 1000; i++)
+    // {
+    //     arr = append(arr, &capacity, &length, rand());
+    //
+    //     std::cout << "length = " << length << '\n';
+    //     std::cout << "capacity = " << capacity << '\n';
+    //
+    //     Sleep(75);
+    // }
+    //
+    // print(arr, length);
+    //
+    // destroy(arr);
+    //
+    //
+    // printf("\n");
+    // system("pause");
 
-    for (int i = 0; i < 1000; i++)
+    // int a = 50;
+    //
+    // std::cout << a++;
+    //
+    // int arr[3] {10, 20, 30};
+    //
+    // int* copy = arr;
+    //
+    // copy++;
+    // copy++;
+    //
+    // std::cout << *copy;
+
+    int arr[] = {10, 20, 30};
+    char arr2[] = {'b', 'o', 'x', '\0'};
+    char arr3[] = "box";
+
+    // arr[1] == *(arr + 1)
+    std::cout << arr3 << '\n';
+
+    int arr4[2][2]
     {
-        arr = append(arr, &capacity, &length, rand());
+        {1, 2},
+        {3, 4}
+    };
 
-        std::cout << "length = " << length << '\n';
-        std::cout << "capacity = " << capacity << '\n';
+    std::cout << arr4[0][1];
+    std::cout << *(*(arr4 + 0) + 1);
 
-        Sleep(75);
-    }
-    
-    print(arr, length);
-    
-    destroy(arr);
-
-
-    printf("\n");
-    system("pause");
 
     return 0;
 }
