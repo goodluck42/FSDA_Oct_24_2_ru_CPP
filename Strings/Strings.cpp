@@ -26,7 +26,7 @@ void cout(const char* str)
 int my_strlen(const char* str)
 {
     int count = 0;
-    
+
     while (true)
     {
         char c = *str;
@@ -41,6 +41,32 @@ int my_strlen(const char* str)
     }
 }
 
+int my_strcmp(const char* str1, const char* str2)
+{
+    while (true)
+    {
+        char left = *str1;
+        char right = *str2;
+
+        if (left == '\0' && right == '\0')
+        {
+            return 0;
+        }
+
+        if (left > right)
+        {
+            return 1;
+        }
+
+        if (left < right)
+        {
+            return -1;
+        }
+
+        ++str1;
+        ++str2;
+    }
+}
 
 int main(int argc, char* argv[])
 {
@@ -106,8 +132,7 @@ int main(int argc, char* argv[])
     //     delete[] str;
     // }
 
-    
-    
+
     // {
     //     int length = 32;
     //     char* my_str2 = new char[length]{};
@@ -124,25 +149,116 @@ int main(int argc, char* argv[])
     // }
 
     // lower & upper case
+    // {
+    //     char* str = new char[32]{};
+    //
+    //     strcpy_s(str, 32, "Hello ");
+    //     
+    //     // _strupr_s(str, 32);
+    //
+    //     // _strlwr_s(str, 32);
+    //     
+    //     // std::cout << std::isupper(str[0]);        
+    //     // std::cout << std::islower(str[1]);
+    //
+    //     // H e l l o _ w o r l d ...
+    //     strcat_s(str, 32, "world"); // "str1" + "str2"
+    //     
+    //     std::cout << str << '\n';
+    //     
+    //     delete[] str;
+    // }
+
+    // Strings
+    // {
+    //     // char str[] = "ravan";
+    //     // char str2[] = "ravan";
+    //
+    //     //str[0] = 'R'; // ok        
+    // }
+
+    // {
+    //     const char* str = "ravan";
+    //     const char* str2 = "ravan";
+    //
+    //     // str[0] = 'R';
+    //     
+    //     std::cout << (void*)str << '\n';
+    //     std::cout << (void*)str2 << '\n';
+    // }
+
+
+    // char symbol = 'A';
+    //
+    // symbol += 32;
+
+    // std::cout << (char)('a' - 32) << '\n';
+    // std::cout << (char)('A' + 32) << '\n';
+
+    // strlen;
+    // strupr;
+    // strlwr;
+    // strcat;
+    // strcpy;
+
+    // strcmp
+
+    // {
+    //     int length = 100;
+    //     char* str1 = new char[length];
+    //     char* str2 = new char[length];
+    //
+    //     std::cin.getline(str1, length);
+    //     std::cin.getline(str2, length);
+    //
+    //     int result = my_strcmp(str1, str2);
+    //
+    //     std::cout << result << '\n';
+    //
+    //     delete[] str1;
+    //     delete[] str2;
+    //
+    //     // strcmp("Car", "Egg"); // -1 => "Car" < "Egg"
+    //     // Car
+    //     // Egg
+    //     // 67 > 69
+    //
+    //
+    //     // Car
+    //     // Cam
+    //
+    //     // Cars
+    //     // Car
+    // }
+
+    // {
+    //     const char* str = "100";
+    //     
+    //     int result = atoi(str); // atof, atol, atoll
+    //
+    //     std::cout << result * 2 << '\n';
+    // }
+
+    // strchr & strstr
     {
-        char* str = new char[32]{};
-
-        strcpy_s(str, 32, "Hello ");
+        // auto c = L'z';
         
-        // _strupr_s(str, 32);
+        char* str = new char[100]{};
 
-        // _strlwr_s(str, 32);
+        strcpy_s(str, 100, "Hey there! How are u doin? What are these???");
+
+        ///
+        // char* result = strchr(str, '!'); // strrchr & strchr
+        ///
+
+        char* result = strstr(str, "are"); // strstr
         
-        // std::cout << std::isupper(str[0]);        
-        // std::cout << std::islower(str[1]);
-
-        // H e l l o _ w o r l d ...
-        strcat_s(str, 32, "world");
-
-        std::cout << str << '\n';
+        // long long diff = std::abs(str - result);
+        //
+        // std::cout << str[diff];
         
-        delete[] str;
+        std::cout << result;
     }
-        
+    
     return 0;
 }
