@@ -3,6 +3,16 @@
 // C style
 // C++ style
 
+int char_to_int(char c) // '2' to 2
+{
+    ???
+}
+
+char* readline(FILE* file)
+{
+    
+}
+
 int main(int argc, char* argv[])
 {
     //// Write to file
@@ -72,33 +82,62 @@ int main(int argc, char* argv[])
     // }
 
     // Read whole file 2
-    {
-        FILE* file{};
-    
-        (void)fopen_s(&file, "data.txt", "r");
-    
-        if (file != nullptr)
-        {
-            int bufferSize = 64;
-            char* buffer = new char[bufferSize];
-    
-            while (true)
-            {
-                char* ptr = fgets(buffer, bufferSize, file);
-                
-                if (ptr == nullptr)
-                {
-                    break;
-                }
-    
-                std::cout << ptr;
-            }
-    
-            (void)fclose(file);
+    // {
+    //     FILE* file{};
+    //
+    //     (void)fopen_s(&file, "data.txt", "r");
+    //
+    //     if (file != nullptr)
+    //     {
+    //         int bufferSize = 64;
+    //         char* buffer = new char[bufferSize];
+    //
+    //         while (true)
+    //         {
+    //             char* ptr = fgets(buffer, bufferSize, file);
+    //             
+    //             if (ptr == nullptr)
+    //             {
+    //                 break;
+    //             }
+    //
+    //             std::cout << ptr;
+    //         }
+    //
+    //         (void)fclose(file);
+    //
+    //         delete[] buffer;
+    //     }
+    // }
 
-            delete[] buffer;
-        }
-    }
+    // 
+    // {
+    //     FILE* file{};
+    //
+    //     (void)fopen_s(&file, "data.txt", "r");
+    //
+    //     if (file != nullptr)
+    //     {
+    //         while (true)
+    //         {
+    //             int c = fgetc(file);
+    //
+    //             std::cout << "code:" << c << "|symbol: " << (char)c << '\n';
+    //
+    //             if (c == EOF)
+    //             {
+    //                 break;
+    //             }
+    //         }
+    //
+    //         (void)fclose(file);
+    //     }
+    // }
 
+    char c1 = '3';
+    char c2 = '9';
+
+    
+    
     return 0;
 }

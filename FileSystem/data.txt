@@ -1,7 +1,3 @@
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-Pellentesque sed leo quis dolor fermentum interdum.
-Pellentesque est ligula, dapibus non fermentum eu, hendrerit ultricies enim.
-Nunc et erat eu odio placerat varius. Nunc cursus nulla enim, in pulvinar diam scelerisque a.
-Sed ligula magna, interdum quis felis non, malesuada porta ex. Aliquam bibendum a elit id ultricies.
-Suspendisse cursus ligula at dui placerat pellentesque. 
-Aliquam euismod, erat a auctor egestas, metus elit ornare purus, vel condimentum arcu ipsum blandit justo.
+20
++
+10
