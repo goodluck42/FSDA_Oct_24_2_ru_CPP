@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OperatorOverloading2", "OperatorOverloading2.vcxproj", "{BD3147F2-079D-4237-9AB8-D73D282E5A43}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Debug|x64 = Debug|x64
+		Release|Win32 = Release|Win32
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BD3147F2-079D-4237-9AB8-D73D282E5A43}.Debug|Win32.ActiveCfg = Debug|Win32
+		{BD3147F2-079D-4237-9AB8-D73D282E5A43}.Debug|Win32.Build.0 = Debug|Win32
+		{BD3147F2-079D-4237-9AB8-D73D282E5A43}.Debug|x64.ActiveCfg = Debug|x64
+		{BD3147F2-079D-4237-9AB8-D73D282E5A43}.Debug|x64.Build.0 = Debug|x64
+		{BD3147F2-079D-4237-9AB8-D73D282E5A43}.Release|Win32.ActiveCfg = Release|Win32
+		{BD3147F2-079D-4237-9AB8-D73D282E5A43}.Release|Win32.Build.0 = Release|Win32
+		{BD3147F2-079D-4237-9AB8-D73D282E5A43}.Release|x64.ActiveCfg = Release|x64
+		{BD3147F2-079D-4237-9AB8-D73D282E5A43}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+EndGlobal

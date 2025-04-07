@@ -143,7 +143,7 @@ public:
 
     const char* GetCString() const
     {
-        return My_Data;
+        return this->My_Data;
     }
 
 private:
@@ -160,6 +160,7 @@ int main(int argc, char* argv[])
     S2 = S1; // copy assignment
     S2 = std::move(S1); // move assignment
 
+    std::cout << S1.GetCString() << '\n';
     std::cout << S2.GetCString() << '\n';
 
 
@@ -196,3 +197,82 @@ int main(int argc, char* argv[])
 
     return 0;
 }
+
+class Chair
+{
+public:
+    ~Chair()
+    {
+        delete[] My_data;
+    }
+
+    Chair()
+    {
+        Capacity = 9;
+        Length = 0;
+        My_data = new int[Capacity];
+    }
+
+    Chair(const Chair& Other)
+    {
+        My_data = new int[Other.Capacity];
+
+        for (int i = 0; i < Other.Capacity; i++)
+        {
+            My_data[i] = Other.My_data[i];
+        }
+
+        Length = Other.Length;
+        Capacity = Other.Capacity;
+    }
+
+    Chair(Chair&& Other)
+    {
+        this->Length = Other.Length;
+        Other.Length = {};
+
+        this->Capacity = Other.Capacity;
+        Other.Capacity = {};
+
+        this->My_data = Other.My_data;
+        Other.My_data = {};
+    }
+
+    Chair& operator=(const Chair& Other)
+    {
+        this->~Chair();
+
+        My_data = new int[Other.Capacity];
+
+        for (int i = 0; i < Other.Capacity; i++)
+        {
+            My_data[i] = Other.My_data[i];
+        }
+
+        Length = Other.Length;
+        Capacity = Other.Capacity;
+
+        return *this;
+    }
+
+    Chair& operator=(Chair&& Other)
+    {
+        this->~Chair();
+
+        this->Length = Other.Length;
+        Other.Length = {};
+
+        this->Capacity = Other.Capacity;
+        Other.Capacity = {};
+
+        this->My_data = Other.My_data;
+        Other.My_data = {};
+
+        return *this;
+    }
+
+private:
+    int* My_data;
+    int Length;
+    int Capacity;
+};
