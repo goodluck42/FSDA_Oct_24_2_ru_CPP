@@ -133,19 +133,17 @@ int main(int argc, char* argv[])
     //     int result = Range(Engine);
     //
     //     std::cout << result << '\n';
-    //
     // }
     //
-    // //// Our RNG
-    // {
-    //     RandomEngine Engine{};
-    //     Range Range{10, 99};
-    //
-    //     int result = Range(Engine);
-    //
-    //     std::cout << result << '\n';
-    // }
-
+    //// Our RNG
+    {
+        RandomEngine Engine{};
+        Range Range{10, 99};
+    
+        int result = Range(Engine);
+    
+        std::cout << result << '\n';
+    }
 
     return 0;
 }

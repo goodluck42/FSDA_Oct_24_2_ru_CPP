@@ -51,6 +51,10 @@ int main(int argc, char* argv[])
     //     std::cout << Result << '\n';
     // }
 
+    // 10101010 >> 2
+    // 00101010
+    // 10101000
+    
     //// >> right shift
     // {
     //     // 00110000 00111001
