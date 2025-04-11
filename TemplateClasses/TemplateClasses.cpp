@@ -50,12 +50,12 @@ private:
     size_t My_Capacity;
     static constexpr size_t My_DefaultCapacity = 15;
 };
-s
+
 template <typename UType>
 std::ostream& operator<<(std::ostream& Os, const Array<UType>& Array)
 {
     Os << "{";
-    for (int i = 0; i < Array.My_Length; i++)
+    for (size_t i = 0; i < Array.My_Length; i++)
     {
         Os << Array[i];
 
