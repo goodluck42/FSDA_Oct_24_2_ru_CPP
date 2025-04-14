@@ -1,6 +1,8 @@
 #include <iostream>
 #include <vector>
 
+
+
 class Object
 {
 public:
@@ -116,7 +118,7 @@ public:
 
 // partial spec
 template <typename TType>
-class Array<TType*>
+class Array<TType>
 {
 public:
     ~Array()
@@ -160,6 +162,25 @@ struct IsPrimitive
 {
     static constexpr bool Value = false;
 };
+
+
+template<typename T1, typename T2>
+auto sum(const T1& a, const T2& b)
+{
+    return a + b;
+}
+
+template<>
+auto sum<int>(const int& a, const int& b)
+{
+    
+}
+
+template<>
+auto sum<float>(const float& a, const float& b)
+{
+    
+}
 
 int main(int argc, char* argv[])
 {

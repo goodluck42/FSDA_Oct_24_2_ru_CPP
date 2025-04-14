@@ -1,4 +1,5 @@
 #include <iostream>
+#include <unordered_map>
 
 template <typename TType> // TType = std::string
 class Array
@@ -70,16 +71,57 @@ std::ostream& operator<<(std::ostream& Os, const Array<UType>& Array)
     return Os;
 }
 
+class Greater
+{
+public:
+    bool operator()(int a, int b) const
+    {
+        return a > b;
+    }
+};
+
+class Less
+{
+public:
+    bool operator()(int a, int b) const
+    {
+        return a < b;
+    }
+};
+
+template <typename XType>
+class Integer
+{
+public:
+    Integer(int A, int B) : My_a(A), My_b(B)
+    {
+    }
+
+    bool Compare()
+    {
+        return My_Comparer(My_a, My_b);
+    }
+
+private:
+    XType My_Comparer;
+    int My_a;
+    int My_b;
+};
+
 int main(int argc, char* argv[])
 {
-    Array<int> arr;
+    Integer<Greater> Value{20, 30};
 
-    arr.Append(10);
-    arr.Append(20);
-    arr.Append(30);
-    arr.Append(40);
-
-    std::cout << arr;
+    std::cout << Value.Compare() << '\n';
+    
+    // Array<int> arr;
+    //
+    // arr.Append(10);
+    // arr.Append(20);
+    // arr.Append(30);
+    // arr.Append(40);
+    //
+    // std::cout << arr;
 
     return 0;
 }
