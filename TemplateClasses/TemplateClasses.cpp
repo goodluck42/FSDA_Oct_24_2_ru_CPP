@@ -113,6 +113,10 @@ int main(int argc, char* argv[])
     Integer<Greater> Value{20, 30};
 
     std::cout << Value.Compare() << '\n';
+
+    Less MyLess;
+
+    std::cout << MyLess(10, 20);
     
     // Array<int> arr;
     //
