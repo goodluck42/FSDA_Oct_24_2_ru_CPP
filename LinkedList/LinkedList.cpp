@@ -22,10 +22,6 @@ class LinkedList
 public:
     ~LinkedList()
     {
-        int a = 42;
-
-        int b = a;
-
         if (My_Length == 0)
         {
             return;
@@ -71,7 +67,7 @@ public:
 
     // LinkedListNode<TType>& InsertAfter(const TType& Value, const LinkedListNode<TType>& AfterNode)
     // {
-    // }
+    // }`
 
 private:
     LinkedListNode<TType>* My_Head;
@@ -81,14 +77,16 @@ private:
 
 int main(int argc, char* argv[])
 {
-    LinkedList<int> MyLL;
+    // LinkedList<int> MyLL;
+    //
+    // // 10 -> 20 -> 30
+    // MyLL.InsertAtEnd(10);
+    // LinkedListNode<int>& Node = MyLL.InsertAtEnd(20);
+    // MyLL.InsertAtEnd(30);
+    //
+    // //MyLL.InsertAfter(25, Node);
 
-    // 10 -> 20 -> 30
-    MyLL.InsertAtEnd(10);
-    LinkedListNode<int>& Node = MyLL.InsertAtEnd(20);
-    MyLL.InsertAtEnd(30);
-
-    //MyLL.InsertAfter(25, Node);
-
+    
+    
     return 0;
 }
