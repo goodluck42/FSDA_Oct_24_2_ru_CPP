@@ -1,4 +1,5 @@
 #include <iostream>
+#include "File1.h"
 
 // SharedPtr, UniquePtr
 
@@ -184,6 +185,8 @@ int main(int argc, char* argv[])
 {
     //UniquePtr<Person> Ptr{new Person{"Emi", 99}};
 
+    std::cout << Counter << '\n';
+    
     SharedPtr<Person> Me{new Person{"Alex", 22}};
     SharedPtr<Person> Ptr1{new Person{"Emi", 22}};
     SharedPtr<Person> Ptr2{Ptr1};

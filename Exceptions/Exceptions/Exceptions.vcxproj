@@ -20,9 +20,9 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{E381C370-ECCC-45DC-9D89-398BE8F13781}</ProjectGuid>
+    <ProjectGuid>{F2C58908-E189-4820-9A1B-8B64779608A6}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>SmartPointers</RootNamespace>
+    <RootNamespace>Exceptions</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -154,11 +154,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="File1.cpp" />
-    <ClCompile Include="SmartPointers.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="File1.h" />
+    <ClCompile Include="Exceptions.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
